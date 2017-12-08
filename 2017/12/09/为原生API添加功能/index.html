@@ -1,11 +1,15 @@
+
+
 <!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  
-  <title>为原生API添加功能 - 伴青灯黄卷</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="#为原生API添加功能 为原生API添加功能，即继承原生API并进行扩展这篇文章来源于一个需求：如何统计ajax请求从发起到成功返回所耗费的时间？ 如果在业务中每个请求的发起和结束时进行打点，计算差值的话，那么工作量将非常巨大，如果要求每个项目封装一个通用方法的话，对于我们这种有好几百个项目的部门来说也同样是不可能的，那么就需要对XMLHttpRequest本身进行功能扩展 实现原理解析不改变th">
+<html lang="zh-CN">
+<head prefix="og: http://ogp.me/ns#">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta name="description" content="">
+    <title>为原生API添加功能 | 伴青灯黄卷</title>
+
+    <!-- Open Graph -->
+    <meta name="description" content="#为原生API添加功能 为原生API添加功能，即继承原生API并进行扩展这篇文章来源于一个需求：如何统计ajax请求从发起到成功返回所耗费的时间？ 如果在业务中每个请求的发起和结束时进行打点，计算差值的话，那么工作量将非常巨大，如果要求每个项目封装一个通用方法的话，对于我们这种有好几百个项目的部门来说也同样是不可能的，那么就需要对XMLHttpRequest本身进行功能扩展 实现原理解析不改变th">
 <meta property="og:type" content="article">
 <meta property="og:title" content="为原生API添加功能">
 <meta property="og:url" content="http://yoursite.com/2017/12/09/为原生API添加功能/index.html">
@@ -16,71 +20,128 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="为原生API添加功能">
 <meta name="twitter:description" content="#为原生API添加功能 为原生API添加功能，即继承原生API并进行扩展这篇文章来源于一个需求：如何统计ajax请求从发起到成功返回所耗费的时间？ 如果在业务中每个请求的发起和结束时进行打点，计算差值的话，那么工作量将非常巨大，如果要求每个项目封装一个通用方法的话，对于我们这种有好几百个项目的部门来说也同样是不可能的，那么就需要对XMLHttpRequest本身进行功能扩展 实现原理解析不改变th">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  <link href="/webfonts/ptserif/main.css" rel='stylesheet' type='text/css'>
-  <link href="/webfonts/source-code-pro/main.css" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="/css/style.css">
-  
+
+    <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Person",
+  "email": "mailto:",
+  "image": "",
+  "name": "bigben",
+  "url": "http://yoursite.com"
+}
+</script>
+    <script>
+    var algoliaEnabled = false;
+    
+</script>
+
+    
+
+    
+    
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+    
+    
+    
+        <!-- stylesheets list from config.yml -->
+        
+        <link rel="stylesheet" href="/css/aloha.css">
+        
+        <link rel="stylesheet" href="//cdn.bootcss.com/semantic-ui/2.2.4/semantic.min.css">
+        
+        <link rel="stylesheet" href="//cdn.bootcss.com/magnific-popup.js/1.1.0/magnific-popup.min.css">
+        
+    
 
 </head>
+<body id="body" style="margin-bottom: 0;" class="pushable">
 
-<body>
-  <div id="container">
-    <header id="header">
-  <div id="header-outer" class="outer">
-    <div id="header-inner" class="inner">
-      <a id="main-nav-toggle" class="nav-icon" href="javascript:;"></a>
-      <a id="logo" class="logo" href="/"></a>
-      <nav id="main-nav">
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-          <a class="main-nav-link" href="/categories">Categories</a>
-        
-          <a class="main-nav-link" href="/tags">Tags</a>
-        
-          <a class="main-nav-link" href="/about">About</a>
-        
-          <a class="main-nav-link" href="/atom.xml">Rss</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        <div id="search-form-wrap">
-          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+    <div class="ui top fixed menu">
+        <a class="item" id="menu-icon"><i class="sidebar icon"></i></a>
+    </div>
+
+    <div id="menu-sidebar" class="ui left vertical sidebar menu">
+
+    <div id="sidebar-top">
+        <div class="content">
+            <h3>伴青灯黄卷</h3>
         </div>
-      </nav>
     </div>
-  </div>
-</header>
-    <section id="main" class="outer"><article id="post-为原生API添加功能" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      为原生API添加功能
-    </h1>
-  
+    <div class="ui container sidebar-card">
+    <div class="ui people shape content">
+        <div class="active side">
+            <div class="ui card">
+                <div class="image">
+                    <img class="ui medium bordered image" src="/images/avatar.jpg">
+                </div>
+                <div class="content">
+                    <a class="header">bigben</a>
+                    
+                </div>
+                <div class="extra content">
+                    <div class="ui list">
+                        
+                        
+                    </div>
 
-      </header>
-    
-    <div class="article-meta">
-      <a href="/2017/12/09/为原生API添加功能/" class="article-date">
-  <time datetime="2017-12-08T18:15:20.000Z" itemprop="datePublished">2017-12-09</time>
-</a>
-      
-      
+                </div>
+                <div class="extra content">
+                    <div class="ui list">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>#为原生API添加功能</p>
+
+
+</div>
+
+    
+    
+
+    
+
+    
+    <a href="/index.html" class="item" >
+        <i class="home icon"></i>
+        首页
+    </a>
+
+    
+
+    
+</div>
+
+    <div class="pusher body-content">
+        <div id="content" class="ui main container">
+            <!--<div class="ui one column grid">-->
+                <!--<div class="column">-->
+                    <!--<div class="ui main container">-->
+                        <div id="post-为原生API添加功能" class="ui main container article-type-post">
+
+    
+
+    <div class="ui divided grid">
+
+        <div class="two column row" id="article-content">
+
+            <div class="thirteen wide computer thirteen wide tablet sixteen wide mobile column">
+                
+
+<h1 class="ui header">
+    
+    为原生API添加功能
+</h1>
+
+
+
+                <div class="article-inner">
+
+                    <div class="article-entry" itemprop="articleBody">
+                        
+                        <p>#为原生API添加功能</p>
 <h4 id="为原生API添加功能，即继承原生API并进行扩展"><a href="#为原生API添加功能，即继承原生API并进行扩展" class="headerlink" title="为原生API添加功能，即继承原生API并进行扩展"></a>为原生API添加功能，即继承原生API并进行扩展</h4><p>这篇文章来源于一个需求：<strong>如何统计ajax请求从发起到成功返回所耗费的时间？</strong> 如果在业务中每个请求的发起和结束时进行打点，计算差值的话，那么工作量将非常巨大，如果要求每个项目封装一个通用方法的话，对于我们这种有好几百个项目的部门来说也同样是不可能的，那么就需要对XMLHttpRequest本身进行功能扩展</p>
 <h4 id="实现原理解析"><a href="#实现原理解析" class="headerlink" title="实现原理解析"></a>实现原理解析</h4><p>不改变this指向的情况，比如下面这个例子，this指向始终是window,那么我们无需对this的指向做任何更改。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//原函数</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">a</span> (<span class="params">v</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(v)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//创建一个变量b, 指向原函数，以保留原函数的功能</span></span><br><span class="line"><span class="keyword">let</span> b = a;</span><br><span class="line"></span><br><span class="line"><span class="comment">//覆写原函数</span></span><br><span class="line">a = <span class="function"><span class="keyword">function</span> (<span class="params">v</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(v + <span class="number">1</span>); <span class="comment">//执行新增功能</span></span><br><span class="line">    b(v);      <span class="comment">//执行原函数功能</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">a(<span class="number">1</span>); <span class="comment">// 2 1</span></span><br></pre></td></tr></table></figure>
@@ -105,57 +166,99 @@
 <li><a href="http://learn.baidu.com/pages/index.html#/video/?courseId=11627&amp;elementId=6e85228b-2279-4be8-9213-61abf90e8634&amp;userId=6709436&amp;groupId=324118&amp;_k=e0df0d" target="_blank" rel="noopener">系统全面的理解继承可参考之前建伟做的分享</a></li>
 </ul>
 
-      
-    </div>
-    
-    
-      <footer class="article-footer">
+                        
+                    </div>
+
+                    
+                    
+                    
+
+                    <div class="description post-description">
+    <span class="post-description-item">
+        <time datetime="2017-12-08T18:15:20.000Z" itemprop="datePublished">2017-12-09</time>
+
+    </span>
+    <span class="post-description-item">
         
-      </footer>
-    
-  </div>
-  
-    
-  
-</article>
+    </span>
+</div>
 
+                </div>
+                
+                <div id="pagination" class="nav-web ui text container pagination">
 
+    <div class="ui stackable two column divided grid container">
+        <div class="row">
+            <div class="column nav-left">
+                
 
+                <a class="ui tiny button disabled"><i class="angle left icon"></i>前一篇</a>
 
-<div class="share_addthis">
-  <div class="sharing addthis_toolbox share">
-    <a class="addthis_button_facebook_like"></a>
-    <a class="addthis_button_tweet"></a>
-    <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
-    <a class="addthis_counter addthis_pill_style"></a>
-  </div>
-  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-560c64c35486b3d4" async="async"></script>
+                
+            </div>
+            <div class="column nav-right">
+                
+
+                <a class="ui tiny button disabled">下一篇<i class="angle right icon"></i></a>
+
+                
+            </div>
+        </div>
+    </div>
+
+</div>
+                
+            </div>
+
+            
+            <div class="three wide computer three wide tablet column">
+
+                <div class="ui sticky article-toc" id="article-toc">
+                    <!-- toc -->
+                    <ol class="ui ordered list"><li><a href="#为原生API添加功能，即继承原生API并进行扩展"><span>为原生API添加功能，即继承原生API并进行扩展</span></a></li><li><a href="#实现原理解析"><span>实现原理解析</span></a></li><li><a href="#实例1：在alert的时候console-log打印alert的值"><span>实例1：在alert的时候console.log打印alert的值</span></a></li><li><a href="#实例2：在console-log的同时进行alert"><span>实例2：在console.log的同时进行alert</span></a></li><li><a href="#方法总结"><span>方法总结</span></a><ol><li><a href="#step1："><span>step1：</span></a></li><li><a href="#step2："><span>step2：</span></a></li></ol></li><li><a href="#通过apply与call实现继承的方式"><span>通过apply与call实现继承的方式</span></a></li><li><a href="#参考资料"><span>参考资料</span></a></li></ol>
+                </div>
+
+            </div>
+            
+
+        </div>
+    </div>
 </div>
 
 
-
-
-
-</section>
-    <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2017 bigben&nbsp;
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>, theme by <a href="http://github.com/ppoffice">PPOffice</a>
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        </div>
+        <div class="ui vertical footer segment">
+    <div class="ui center aligned container">
+        <div class="ui inverted section divider"></div>
+        &copy; 2017 <a href="/">bigben</a>,
+        Powered by <a href="https://github.com/henryhuang/hexo-theme-aloha" target="_blank">Aloha</a> and <a
+                href="http://hexo.io/" target="_blank">Hexo</a>.
     </div>
-  </div>
-</footer>
-    
+</div>
 
-<script src="/js/jquery.min.js"></script>
+    </div>
 
 
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
 
 
-<script src="/js/script.js"></script>
-  </div>
+<!-- scripts list from theme config.yml -->
+
+<script src="//cdn.bootcss.com/jquery/3.1.0/jquery.min.js"></script>
+
+<script src="//cdn.bootcss.com/semantic-ui/2.2.4/semantic.min.js"></script>
+
+<script src="//cdn.bootcss.com/algoliasearch/3.18.1/algoliasearch.min.js"></script>
+
+<script src="//cdn.bootcss.com/algoliasearch-helper-js/2.13.0/algoliasearch.helper.min.js"></script>
+
+<script src="/js/semantic-ui-algolia.js"></script>
+
+<script src="/js/aloha-events.js"></script>
+
+
+
 </body>
 </html>
