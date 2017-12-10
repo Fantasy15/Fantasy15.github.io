@@ -324,8 +324,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-12-09T03:03:40+08:00">
-                2017-12-09
+              <time title="更新于" itemprop="dateModified" datetime="2017-12-10T21:58:23+08:00">
+                2017-12-10
               </time>
             
           </span>
@@ -382,7 +382,15 @@
       
         
           
-            <p>#####占坑先</p>
+            <h4 id="什么是跨域，为什么会产生跨域"><a href="#什么是跨域，为什么会产生跨域" class="headerlink" title="什么是跨域，为什么会产生跨域"></a>什么是跨域，为什么会产生跨域</h4><p>跨域是<a href="https://developer.mozilla.org/zh-CN/docs/Web/Security/Same-origin_policy" target="_blank" rel="noopener">浏览器的同源策略</a>引起的，即server to server 的service访问不存在跨域问题。</p>
+<p>当一个资源从与该资源本身所在的服务器不同的域或端口请求一个资源时，资源会发起一个跨域 HTTP 请求。</p>
+<h4 id="跨域的几种解决方案"><a href="#跨域的几种解决方案" class="headerlink" title="跨域的几种解决方案"></a>跨域的几种解决方案</h4><p>通常在业务中需要处理的 xhr 和 fetch 产生异步请求问题。根据请求方式（get or post）不同来采用不同的技术方案</p>
+<h4 id="GET请求"><a href="#GET请求" class="headerlink" title="GET请求"></a>GET请求</h4><p>get 请求建议统一采用的 jsonp 方案。</p>
+<p>jonsp： 前端js 在 window上 注册 callback 函数，然后动态地创建 script 标签插入 html 里，script标签 src除了带上正常的 get请求参数以外，还有把注册的 callbakc 函数名传递给后端，server 同样要对 get 请求进行callback改造，如果收到callback的<br>参数，则需要把返回数据拼接成 带callback名的数据返回。 注册的callback函数里是处理返回数据的逻辑</p>
+<h4 id="POST请求"><a href="#POST请求" class="headerlink" title="POST请求"></a>POST请求</h4><p>post 请求根据后端返回数据的方式不同分为两种</p>
+<h4 id="白名单"><a href="#白名单" class="headerlink" title="白名单"></a>白名单</h4><p>需要身份的验证，例如带cookie, 前端设置 xhr.withCredentials 为 true, 后端根据 content-type 及 header 区别是简单请求还是预检请求。 需要设置一些对应的字段，主要在 access-control-allow-origin 添加白名单地址 ，另外还需要设置 access-control-allow-credentials等一些字段 来配合前端。 </p>
+<h4 id="iframe嵌套form请求，jump页跳转方式"><a href="#iframe嵌套form请求，jump页跳转方式" class="headerlink" title="iframe嵌套form请求，jump页跳转方式"></a>iframe嵌套form请求，jump页跳转方式</h4><p>sdk 性质的跨域 post跨域请求多用到这种解决方案。 动态地创建 iframe,内嵌 form 表单，将 post 请求 url 设置为 form 的 action,<br>和 iframe target, form表单请求的返回类型为 html, html内包含返回数据， html内自执行脚本跳转到jump页， 前端通过注册message<br>事件监听 jump页 的相应的message请求。 百度首页的passport 登录就用到了这种技术</p>
+<p>讲的好笼统，先占坑，后续上代码</p>
 
           
         
@@ -478,8 +486,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-12-09T02:23:36+08:00">
-                2017-12-09
+              <time title="更新于" itemprop="dateModified" datetime="2017-12-10T20:26:19+08:00">
+                2017-12-10
               </time>
             
           </span>
@@ -536,8 +544,7 @@
       
         
           
-            <p>#为原生API添加功能</p>
-<h4 id="为原生API添加功能，即继承原生API并进行扩展"><a href="#为原生API添加功能，即继承原生API并进行扩展" class="headerlink" title="为原生API添加功能，即继承原生API并进行扩展"></a>为原生API添加功能，即继承原生API并进行扩展</h4><p>这篇文章来源于一个需求：<strong>如何统计ajax请求从发起到成功返回所耗费的时间？</strong> 如果在业务中每个请求的发起和结束时进行打点，计算差值的话，那么工作量将非常巨大，如果要求每个项目封装一个通用方法的话，对于我们这种有好几百个项目的部门来说也同样是不可能的，那么就需要对XMLHttpRequest本身进行功能扩展</p>
+            <h4 id="为原生API添加功能，即继承原生API并进行扩展"><a href="#为原生API添加功能，即继承原生API并进行扩展" class="headerlink" title="为原生API添加功能，即继承原生API并进行扩展"></a>为原生API添加功能，即继承原生API并进行扩展</h4><p>这篇文章来源于一个需求：<strong>如何统计ajax请求从发起到成功返回所耗费的时间？</strong> 如果在业务中每个请求的发起和结束时进行打点，计算差值的话，那么工作量将非常巨大，如果要求每个项目封装一个通用方法的话，对于我们这种有好几百个项目的部门来说也同样是不可能的，那么就需要对XMLHttpRequest本身进行功能扩展</p>
 <h4 id="实现原理解析"><a href="#实现原理解析" class="headerlink" title="实现原理解析"></a>实现原理解析</h4><p>不改变this指向的情况，比如下面这个例子，this指向始终是window,那么我们无需对this的指向做任何更改。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//原函数</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">a</span> (<span class="params">v</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(v)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//创建一个变量b, 指向原函数，以保留原函数的功能</span></span><br><span class="line"><span class="keyword">let</span> b = a;</span><br><span class="line"></span><br><span class="line"><span class="comment">//覆写原函数</span></span><br><span class="line">a = <span class="function"><span class="keyword">function</span> (<span class="params">v</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(v + <span class="number">1</span>); <span class="comment">//执行新增功能</span></span><br><span class="line">    b(v);      <span class="comment">//执行原函数功能</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">a(<span class="number">1</span>); <span class="comment">// 2 1</span></span><br></pre></td></tr></table></figure>
 <p>需要改变this指向</p>
@@ -653,6 +660,15 @@
 
             
 
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
             
 
           </nav>

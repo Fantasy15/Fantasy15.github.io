@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="原生,前端," />
 
 
 
@@ -79,17 +79,18 @@
 
 
 
-<meta name="description" content="#为原生API添加功能 为原生API添加功能，即继承原生API并进行扩展这篇文章来源于一个需求：如何统计ajax请求从发起到成功返回所耗费的时间？ 如果在业务中每个请求的发起和结束时进行打点，计算差值的话，那么工作量将非常巨大，如果要求每个项目封装一个通用方法的话，对于我们这种有好几百个项目的部门来说也同样是不可能的，那么就需要对XMLHttpRequest本身进行功能扩展 实现原理解析不改变th">
+<meta name="description" content="为原生API添加功能，即继承原生API并进行扩展这篇文章来源于一个需求：如何统计ajax请求从发起到成功返回所耗费的时间？ 如果在业务中每个请求的发起和结束时进行打点，计算差值的话，那么工作量将非常巨大，如果要求每个项目封装一个通用方法的话，对于我们这种有好几百个项目的部门来说也同样是不可能的，那么就需要对XMLHttpRequest本身进行功能扩展 实现原理解析不改变this指向的情况，比如下面">
+<meta name="keywords" content="原生,前端">
 <meta property="og:type" content="article">
 <meta property="og:title" content="为原生API添加功能">
 <meta property="og:url" content="http://yoursite.com/2017/12/09/为原生API添加功能/index.html">
 <meta property="og:site_name" content="伴青灯黄卷">
-<meta property="og:description" content="#为原生API添加功能 为原生API添加功能，即继承原生API并进行扩展这篇文章来源于一个需求：如何统计ajax请求从发起到成功返回所耗费的时间？ 如果在业务中每个请求的发起和结束时进行打点，计算差值的话，那么工作量将非常巨大，如果要求每个项目封装一个通用方法的话，对于我们这种有好几百个项目的部门来说也同样是不可能的，那么就需要对XMLHttpRequest本身进行功能扩展 实现原理解析不改变th">
+<meta property="og:description" content="为原生API添加功能，即继承原生API并进行扩展这篇文章来源于一个需求：如何统计ajax请求从发起到成功返回所耗费的时间？ 如果在业务中每个请求的发起和结束时进行打点，计算差值的话，那么工作量将非常巨大，如果要求每个项目封装一个通用方法的话，对于我们这种有好几百个项目的部门来说也同样是不可能的，那么就需要对XMLHttpRequest本身进行功能扩展 实现原理解析不改变this指向的情况，比如下面">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-12-08T18:23:36.015Z">
+<meta property="og:updated_time" content="2017-12-10T12:26:19.812Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="为原生API添加功能">
-<meta name="twitter:description" content="#为原生API添加功能 为原生API添加功能，即继承原生API并进行扩展这篇文章来源于一个需求：如何统计ajax请求从发起到成功返回所耗费的时间？ 如果在业务中每个请求的发起和结束时进行打点，计算差值的话，那么工作量将非常巨大，如果要求每个项目封装一个通用方法的话，对于我们这种有好几百个项目的部门来说也同样是不可能的，那么就需要对XMLHttpRequest本身进行功能扩展 实现原理解析不改变th">
+<meta name="twitter:description" content="为原生API添加功能，即继承原生API并进行扩展这篇文章来源于一个需求：如何统计ajax请求从发起到成功返回所耗费的时间？ 如果在业务中每个请求的发起和结束时进行打点，计算差值的话，那么工作量将非常巨大，如果要求每个项目封装一个通用方法的话，对于我们这种有好几百个项目的部门来说也同样是不可能的，那么就需要对XMLHttpRequest本身进行功能扩展 实现原理解析不改变this指向的情况，比如下面">
 
 
 
@@ -325,8 +326,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-12-09T02:23:36+08:00">
-                2017-12-09
+              <time title="更新于" itemprop="dateModified" datetime="2017-12-10T20:26:19+08:00">
+                2017-12-10
               </time>
             
           </span>
@@ -381,8 +382,7 @@
       
 
       
-        <p>#为原生API添加功能</p>
-<h4 id="为原生API添加功能，即继承原生API并进行扩展"><a href="#为原生API添加功能，即继承原生API并进行扩展" class="headerlink" title="为原生API添加功能，即继承原生API并进行扩展"></a>为原生API添加功能，即继承原生API并进行扩展</h4><p>这篇文章来源于一个需求：<strong>如何统计ajax请求从发起到成功返回所耗费的时间？</strong> 如果在业务中每个请求的发起和结束时进行打点，计算差值的话，那么工作量将非常巨大，如果要求每个项目封装一个通用方法的话，对于我们这种有好几百个项目的部门来说也同样是不可能的，那么就需要对XMLHttpRequest本身进行功能扩展</p>
+        <h4 id="为原生API添加功能，即继承原生API并进行扩展"><a href="#为原生API添加功能，即继承原生API并进行扩展" class="headerlink" title="为原生API添加功能，即继承原生API并进行扩展"></a>为原生API添加功能，即继承原生API并进行扩展</h4><p>这篇文章来源于一个需求：<strong>如何统计ajax请求从发起到成功返回所耗费的时间？</strong> 如果在业务中每个请求的发起和结束时进行打点，计算差值的话，那么工作量将非常巨大，如果要求每个项目封装一个通用方法的话，对于我们这种有好几百个项目的部门来说也同样是不可能的，那么就需要对XMLHttpRequest本身进行功能扩展</p>
 <h4 id="实现原理解析"><a href="#实现原理解析" class="headerlink" title="实现原理解析"></a>实现原理解析</h4><p>不改变this指向的情况，比如下面这个例子，this指向始终是window,那么我们无需对this的指向做任何更改。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//原函数</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">a</span> (<span class="params">v</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(v)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//创建一个变量b, 指向原函数，以保留原函数的功能</span></span><br><span class="line"><span class="keyword">let</span> b = a;</span><br><span class="line"></span><br><span class="line"><span class="comment">//覆写原函数</span></span><br><span class="line">a = <span class="function"><span class="keyword">function</span> (<span class="params">v</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(v + <span class="number">1</span>); <span class="comment">//执行新增功能</span></span><br><span class="line">    b(v);      <span class="comment">//执行原函数功能</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">a(<span class="number">1</span>); <span class="comment">// 2 1</span></span><br></pre></td></tr></table></figure>
 <p>需要改变this指向</p>
@@ -437,6 +437,14 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/原生/" rel="tag"># 原生</a>
+          
+            <a href="/tags/前端/" rel="tag"># 前端</a>
+          
+        </div>
       
 
       
@@ -554,6 +562,15 @@
 
             
 
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
             
 
           </nav>
