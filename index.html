@@ -324,8 +324,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-12-10T21:58:23+08:00">
-                2017-12-10
+              <time title="更新于" itemprop="dateModified" datetime="2017-12-11T10:39:54+08:00">
+                2017-12-11
               </time>
             
           </span>
@@ -389,7 +389,7 @@
 <p>jonsp： 前端js 在 window上 注册 callback 函数，然后动态地创建 script 标签插入 html 里，script标签 src除了带上正常的 get请求参数以外，还有把注册的 callbakc 函数名传递给后端，server 同样要对 get 请求进行callback改造，如果收到callback的<br>参数，则需要把返回数据拼接成 带callback名的数据返回。 注册的callback函数里是处理返回数据的逻辑</p>
 <h4 id="POST请求"><a href="#POST请求" class="headerlink" title="POST请求"></a>POST请求</h4><p>post 请求根据后端返回数据的方式不同分为两种</p>
 <h4 id="白名单"><a href="#白名单" class="headerlink" title="白名单"></a>白名单</h4><p>需要身份的验证，例如带cookie, 前端设置 xhr.withCredentials 为 true, 后端根据 content-type 及 header 区别是简单请求还是预检请求。 需要设置一些对应的字段，主要在 access-control-allow-origin 添加白名单地址 ，另外还需要设置 access-control-allow-credentials等一些字段 来配合前端。 </p>
-<h4 id="iframe嵌套form请求，jump页跳转方式"><a href="#iframe嵌套form请求，jump页跳转方式" class="headerlink" title="iframe嵌套form请求，jump页跳转方式"></a>iframe嵌套form请求，jump页跳转方式</h4><p>sdk 性质的跨域 post跨域请求多用到这种解决方案。 动态地创建 iframe,内嵌 form 表单，将 post 请求 url 设置为 form 的 action,<br>和 iframe target, form表单请求的返回类型为 html, html内包含返回数据， html内自执行脚本跳转到jump页， 前端通过注册message<br>事件监听 jump页 的相应的message请求。 百度首页的passport 登录就用到了这种技术</p>
+<h4 id="iframe嵌套form请求，jump页跳转方式"><a href="#iframe嵌套form请求，jump页跳转方式" class="headerlink" title="iframe嵌套form请求，jump页跳转方式"></a>iframe嵌套form请求，jump页跳转方式</h4><p>sdk 性质的跨域 post跨域请求多用到这种解决方案。 动态地创建 iframe,内嵌 form 表单，将 post 请求 url 设置为 form 的 action,<br>保持 iframe name 和 form 的 target 一致, form表单请求的返回类型为 html, html内包含返回数据， html内自执行脚本跳转到jump页， 前端通过注册message<br>事件监听 jump页 的相应的message请求。 百度首页的passport 登录就用到了这种技术</p>
 <p>讲的好笼统，先占坑，后续上代码</p>
 
           
