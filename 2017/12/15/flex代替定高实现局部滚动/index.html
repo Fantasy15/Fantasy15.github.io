@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="前端,局部滚动,flex," />
 
 
 
@@ -79,14 +79,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="标签">
-<meta property="og:url" content="http://yoursite.com/tags/index.html">
+<meta name="description" content="父容器设为flex布局, overflow为hidden, 方向为 column, 这时候子容器1，子容器3正常布局，需要局部滚动的子容器 2 flex设 flex:1，这样这个2容器会把当前屏幕其他正常布局剩下空间充满，然后在 2容器内设置一个scroll的容器4，容器4即是局部滚动容器。这样就不用显示置顶高度，及resize时更新逻辑。 利用flex的 column布局，flex:1等特性可以">
+<meta name="keywords" content="前端,局部滚动,flex">
+<meta property="og:type" content="article">
+<meta property="og:title" content="flex代替定高实现局部滚动">
+<meta property="og:url" content="http://yoursite.com/2017/12/15/flex代替定高实现局部滚动/index.html">
 <meta property="og:site_name" content="伴青灯黄卷">
+<meta property="og:description" content="父容器设为flex布局, overflow为hidden, 方向为 column, 这时候子容器1，子容器3正常布局，需要局部滚动的子容器 2 flex设 flex:1，这样这个2容器会把当前屏幕其他正常布局剩下空间充满，然后在 2容器内设置一个scroll的容器4，容器4即是局部滚动容器。这样就不用显示置顶高度，及resize时更新逻辑。 利用flex的 column布局，flex:1等特性可以">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-12-10T12:17:47.003Z">
+<meta property="og:updated_time" content="2017-12-15T15:33:22.962Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="标签">
+<meta name="twitter:title" content="flex代替定高实现局部滚动">
+<meta name="twitter:description" content="父容器设为flex布局, overflow为hidden, 方向为 column, 这时候子容器1，子容器3正常布局，需要局部滚动的子容器 2 flex设 flex:1，这样这个2容器会把当前屏幕其他正常布局剩下空间充满，然后在 2容器内设置一个scroll的容器4，容器4即是局部滚动容器。这样就不用显示置顶高度，及resize时更新逻辑。 利用flex的 column布局，flex:1等特性可以">
 
 
 
@@ -116,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/tags/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/12/15/flex代替定高实现局部滚动/"/>
 
 
 
 
 
-  <title>标签 | 伴青灯黄卷</title>
+  <title>flex代替定高实现局部滚动 | 伴青灯黄卷</title>
   
 
 
@@ -265,40 +269,201 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/15/flex代替定高实现局部滚动/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="fe3o4">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/userImage.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="伴青灯黄卷">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h2 class="post-title" itemprop="name headline">标签</h2>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <div class="tag-cloud">
-            <div class="tag-cloud-title">
-                目前共计 5 个标签
-            </div>
-            <div class="tag-cloud-tags">
-              <a href="/tags/flex/" style="font-size: 12px; color: #ccc">flex</a> <a href="/tags/前端/" style="font-size: 30px; color: #111">前端</a> <a href="/tags/原生/" style="font-size: 12px; color: #ccc">原生</a> <a href="/tags/局部滚动/" style="font-size: 12px; color: #ccc">局部滚动</a> <a href="/tags/跨域/" style="font-size: 12px; color: #ccc">跨域</a>
-            </div>
-          </div>
+          <h2 class="post-title" itemprop="name headline">flex代替定高实现局部滚动</h2>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-15T23:25:04+08:00">
+                2017-12-15
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2017-12-15T23:33:22+08:00">
+                2017-12-15
+              </time>
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/12/15/flex代替定高实现局部滚动/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2017/12/15/flex代替定高实现局部滚动/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2017/12/15/flex代替定高实现局部滚动/" class="leancloud_visitors" data-flag-title="flex代替定高实现局部滚动">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <p>父容器设为flex布局, overflow为hidden, 方向为 column, 这时候子容器1，子容器3正常布局，需要局部滚动的子容器 2 flex设 flex:1，这样这个2容器会把当前屏幕其他正常布局剩下空间充满，然后在 2容器内设置一个scroll的容器4，容器4即是局部滚动容器。<br>这样就不用显示置顶高度，及resize时更新逻辑。</p>
+<p>利用flex的 column布局，flex:1等特性可以有很多套路实现填充。灵活才是王道</p>
+
       
     </div>
     
     
     
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    fe3o4
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://yoursite.com/2017/12/15/flex代替定高实现局部滚动/" title="flex代替定高实现局部滚动">http://yoursite.com/2017/12/15/flex代替定高实现局部滚动/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/前端/" rel="tag"># 前端</a>
+          
+            <a href="/tags/局部滚动/" rel="tag"># 局部滚动</a>
+          
+            <a href="/tags/flex/" rel="tag"># flex</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/12/09/前端跨域解决方案/" rel="next" title="前端跨域解决方案">
+                <i class="fa fa-chevron-left"></i> 前端跨域解决方案
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -307,6 +472,20 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -554,6 +733,18 @@
       <script id="dsq-count-scr" src="https://fantasy15.disqus.com/count.js" async></script>
     
 
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://yoursite.com/2017/12/15/flex代替定高实现局部滚动/';
+          this.page.identifier = '2017/12/15/flex代替定高实现局部滚动/';
+          this.page.title = 'flex代替定高实现局部滚动';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://fantasy15.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
     
 
   
