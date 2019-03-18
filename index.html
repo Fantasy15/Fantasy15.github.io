@@ -80,12 +80,12 @@
 
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="伴青灯黄卷">
+<meta property="og:title" content="Keep Running">
 <meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="伴青灯黄卷">
+<meta property="og:site_name" content="Keep Running">
 <meta property="og:locale" content="zh-Hans">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="伴青灯黄卷">
+<meta name="twitter:title" content="Keep Running">
 
 
 
@@ -121,7 +121,7 @@
 
 
 
-  <title>伴青灯黄卷</title>
+  <title>Keep Running</title>
   
 
 
@@ -152,7 +152,7 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">伴青灯黄卷</span>
+        <span class="site-title">Keep Running</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -277,6 +277,325 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/18/移动端web页面的调试/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="fe3o4">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/userImage.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Keep Running">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/03/18/移动端web页面的调试/" itemprop="url">移动端web页面的调试</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-18T19:33:29+08:00">
+                2019-03-18
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2019-03-18T19:54:23+08:00">
+                2019-03-18
+              </time>
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/03/18/移动端web页面的调试/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2019/03/18/移动端web页面的调试/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2019/03/18/移动端web页面的调试/" class="leancloud_visitors" data-flag-title="移动端web页面的调试">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>移动端 web 调试存在调试工具不足，问题定位困难，环境配置复杂等问题，通过 chrome 浏览器的 inpect 功能 能够有效地缓解这种痛苦，显著提升开发效率。具体步骤如下。</p>
+<p>背景：本地有一个页面 localhost:8080/home.html, 本机局域网ip 192.178.100.100，手机与电脑位于同一网络内。</p>
+<ul>
+<li>手机上开启一个 web 页面, 地址 192.178.100.100:8080/home.html</li>
+<li>手机启动开发者模式，如何开启自行百度</li>
+<li>手机连接电脑，并在手机上开启 USB 调试</li>
+<li>电脑端打开chrome 浏览器，地址栏输入 chrome://inspect；Remote Target 中找到 手机上已开启的那个web页(192.178.100.100:8080/home.html),点击 inspect, 这时候会开启该页面的 devtool 模式，如果 404 则看下是否需要翻墙；</li>
+<li>手机端现在和电脑是同步的，可以在电脑 devtool 上进行调试。</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/18/正向代理与反向代理/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="fe3o4">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/userImage.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Keep Running">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/03/18/正向代理与反向代理/" itemprop="url">正向代理与反向代理</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-18T19:28:23+08:00">
+                2019-03-18
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2019-03-18T19:30:51+08:00">
+                2019-03-18
+              </time>
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/03/18/正向代理与反向代理/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2019/03/18/正向代理与反向代理/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2019/03/18/正向代理与反向代理/" class="leancloud_visitors" data-flag-title="正向代理与反向代理">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ul>
+<li>正向代理，即客户端代理，隐藏真实的客户端；场景如前端与后台联调接口，为了跨域而开启的代理server; 翻墙用的VPN</li>
+<li>反向代理，即服务端代理，隐藏真实的服务端；场景如 nginx 反向代理;</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/15/flex代替定高实现局部滚动/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -286,7 +605,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="伴青灯黄卷">
+      <meta itemprop="name" content="Keep Running">
     </span>
 
     
@@ -324,8 +643,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-12-16T14:14:52+08:00">
-                2017-12-16
+              <time title="更新于" itemprop="dateModified" datetime="2019-03-18T19:19:49+08:00">
+                2019-03-18
               </time>
             
           </span>
@@ -441,7 +760,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="伴青灯黄卷">
+      <meta itemprop="name" content="Keep Running">
     </span>
 
     
@@ -479,8 +798,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-12-11T10:39:54+08:00">
-                2017-12-11
+              <time title="更新于" itemprop="dateModified" datetime="2019-03-18T19:20:00+08:00">
+                2019-03-18
               </time>
             
           </span>
@@ -543,7 +862,7 @@
 <h4 id="GET请求"><a href="#GET请求" class="headerlink" title="GET请求"></a>GET请求</h4><p>get 请求建议统一采用的 jsonp 方案。</p>
 <p>jonsp： 前端js 在 window上 注册 callback 函数，然后动态地创建 script 标签插入 html 里，script标签 src除了带上正常的 get请求参数以外，还有把注册的 callbakc 函数名传递给后端，server 同样要对 get 请求进行callback改造，如果收到callback的<br>参数，则需要把返回数据拼接成 带callback名的数据返回。 注册的callback函数里是处理返回数据的逻辑</p>
 <h4 id="POST请求"><a href="#POST请求" class="headerlink" title="POST请求"></a>POST请求</h4><p>post 请求根据后端返回数据的方式不同分为两种</p>
-<h4 id="白名单"><a href="#白名单" class="headerlink" title="白名单"></a>白名单</h4><p>需要身份的验证，例如带cookie, 前端设置 xhr.withCredentials 为 true, 后端根据 content-type 及 header 区别是简单请求还是预检请求。 需要设置一些对应的字段，主要在 access-control-allow-origin 添加白名单地址 ，另外还需要设置 access-control-allow-credentials等一些字段 来配合前端。 </p>
+<h4 id="白名单"><a href="#白名单" class="headerlink" title="白名单"></a>白名单</h4><p>需要身份的验证，例如带cookie, 前端设置 xhr.withCredentials 为 true, 后端根据 content-type 及 header 区别是简单请求还是预检请求。 需要设置一些对应的字段，主要在 access-control-allow-origin 添加白名单地址 ，另外还需要设置 access-control-allow-credentials等一些字段 来配合前端。</p>
 <h4 id="iframe嵌套form请求，jump页跳转方式"><a href="#iframe嵌套form请求，jump页跳转方式" class="headerlink" title="iframe嵌套form请求，jump页跳转方式"></a>iframe嵌套form请求，jump页跳转方式</h4><p>sdk 性质的跨域 post跨域请求多用到这种解决方案。 动态地创建 iframe,内嵌 form 表单，将 post 请求 url 设置为 form 的 action,<br>保持 iframe name 和 form 的 target 一致, form表单请求的返回类型为 html, html内包含返回数据， html内自执行脚本跳转到jump页， 前端通过注册message<br>事件监听 jump页 的相应的message请求。 百度首页的passport 登录就用到了这种技术</p>
 <p>讲的好笼统，先占坑，后续上代码</p>
 
@@ -603,7 +922,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="伴青灯黄卷">
+      <meta itemprop="name" content="Keep Running">
     </span>
 
     
@@ -641,8 +960,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-12-10T20:26:19+08:00">
-                2017-12-10
+              <time title="更新于" itemprop="dateModified" datetime="2019-03-18T19:19:57+08:00">
+                2019-03-18
               </time>
             
           </span>
@@ -807,7 +1126,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -820,7 +1139,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -873,7 +1192,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2017</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
