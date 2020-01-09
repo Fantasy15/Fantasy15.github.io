@@ -324,7 +324,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2020-01-09T16:35:42+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2020-01-09T16:40:57+08:00">
                 2020-01-09
               </time>
             
@@ -388,8 +388,8 @@
 </ul>
 <h4 id="effect"><a href="#effect" class="headerlink" title="effect"></a>effect</h4><ul>
 <li><p>定义在运行时的变量会打包进额外的代码</p>
-<p>  eg:</p>
-<p>  源代码包含 <img src="{`${host}${url}`}"></p>
+<p>  eg: 拼接得到的链接</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;img src=&#123;`$&#123;host&#125;$&#123;url&#125;`&#125; /&gt;</span><br></pre></td></tr></table></figure>
 <p>  这样会导致测试环境的 host 也保留在编译后的代码中，同时增加了代码体积。</p>
 </li>
 </ul>

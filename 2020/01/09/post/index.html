@@ -79,20 +79,18 @@
 
 
 
-<meta name="description" content="what webpack defineplugin 能够在编译后的目标 js 代码中定义全局变量 通过定义的 process.env 变量在运行时进行环境区分  effect 定义在运行时的变量会打包进额外的代码   eg:   源代码包含    这样会导致测试环境的 host 也保留在编译后的代码中，同时增加了代码体积。   how 处于安全和优化的考虑。对于一些全局性的配置，建议在编译期，也就">
+<meta name="description" content="what webpack defineplugin 能够在编译后的目标 js 代码中定义全局变量 通过定义的 process.env 变量在运行时进行环境区分  effect 定义在运行时的变量会打包进额外的代码   eg: 拼接得到的链接   1&amp;lt;img src=&amp;#123;`$&amp;#123;host&amp;#125;$&amp;#123;url&amp;#125;`&amp;#125; /&amp;gt;   这样会导致测试环">
 <meta name="keywords" content="webpack">
 <meta property="og:type" content="article">
 <meta property="og:title" content="webpack defineplugin 与 process.env 的实践">
 <meta property="og:url" content="http://yoursite.com/2020/01/09/post/index.html">
 <meta property="og:site_name" content="Keep Running">
-<meta property="og:description" content="what webpack defineplugin 能够在编译后的目标 js 代码中定义全局变量 通过定义的 process.env 变量在运行时进行环境区分  effect 定义在运行时的变量会打包进额外的代码   eg:   源代码包含    这样会导致测试环境的 host 也保留在编译后的代码中，同时增加了代码体积。   how 处于安全和优化的考虑。对于一些全局性的配置，建议在编译期，也就">
+<meta property="og:description" content="what webpack defineplugin 能够在编译后的目标 js 代码中定义全局变量 通过定义的 process.env 变量在运行时进行环境区分  effect 定义在运行时的变量会打包进额外的代码   eg: 拼接得到的链接   1&amp;lt;img src=&amp;#123;`$&amp;#123;host&amp;#125;$&amp;#123;url&amp;#125;`&amp;#125; /&amp;gt;   这样会导致测试环">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/2020/01/09/post/%7B%60$%7Bhost%7D$%7Burl%7D%60%7D">
-<meta property="og:updated_time" content="2020-01-09T08:35:42.143Z">
+<meta property="og:updated_time" content="2020-01-09T08:40:57.790Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="webpack defineplugin 与 process.env 的实践">
-<meta name="twitter:description" content="what webpack defineplugin 能够在编译后的目标 js 代码中定义全局变量 通过定义的 process.env 变量在运行时进行环境区分  effect 定义在运行时的变量会打包进额外的代码   eg:   源代码包含    这样会导致测试环境的 host 也保留在编译后的代码中，同时增加了代码体积。   how 处于安全和优化的考虑。对于一些全局性的配置，建议在编译期，也就">
-<meta name="twitter:image" content="http://yoursite.com/2020/01/09/post/%7B%60$%7Bhost%7D$%7Burl%7D%60%7D">
+<meta name="twitter:description" content="what webpack defineplugin 能够在编译后的目标 js 代码中定义全局变量 通过定义的 process.env 变量在运行时进行环境区分  effect 定义在运行时的变量会打包进额外的代码   eg: 拼接得到的链接   1&amp;lt;img src=&amp;#123;`$&amp;#123;host&amp;#125;$&amp;#123;url&amp;#125;`&amp;#125; /&amp;gt;   这样会导致测试环">
 
 
 
@@ -328,7 +326,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2020-01-09T16:35:42+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2020-01-09T16:40:57+08:00">
                 2020-01-09
               </time>
             
@@ -390,8 +388,8 @@
 </ul>
 <h4 id="effect"><a href="#effect" class="headerlink" title="effect"></a>effect</h4><ul>
 <li><p>定义在运行时的变量会打包进额外的代码</p>
-<p>  eg:</p>
-<p>  源代码包含 <img src="{`${host}${url}`}"></p>
+<p>  eg: 拼接得到的链接</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;img src=&#123;`$&#123;host&#125;$&#123;url&#125;`&#125; /&gt;</span><br></pre></td></tr></table></figure>
 <p>  这样会导致测试环境的 host 也保留在编译后的代码中，同时增加了代码体积。</p>
 </li>
 </ul>
