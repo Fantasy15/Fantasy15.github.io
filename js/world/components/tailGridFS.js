@@ -1,0 +1,2 @@
+const tailGridFS = "#define RED vec3(1.0, 0.1, 0.1) // red\n#define AMB vec3(1.0, 0.6, 0.1)\t// amber\n#define WHT vec3(1.0, 1.0, 1.0)\t// white\n\nvarying float red;\nvarying float amb;\nvarying float wht;\nvarying float brightness;\n\nvoid main() {\n\tgl_FragColor = vec4((RED * red + AMB * amb) * brightness, 1.0);\n}"
+export {tailGridFS}

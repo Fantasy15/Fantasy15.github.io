@@ -1,0 +1,2 @@
+const fragShader = "uniform sampler2D led;\nuniform vec3 color;\n\nvarying float opacity;\nvarying float diag;\n\nvoid main() {\n\t// Multiplicative\n    // gl_FragColor = -texture2D( led, vec2(abs(diag - gl_PointCoord.x), gl_PointCoord.y )) * opacity;\n    // gl_FragColor += 1.0;\n\n\t// Additive\n    gl_FragColor = texture2D( led, vec2(abs(diag - gl_PointCoord.x), gl_PointCoord.y )) * vec4(color, opacity);\n}"
+export {fragShader}

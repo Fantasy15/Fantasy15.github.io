@@ -1,0 +1,2 @@
+const rawVert = "precision highp float;\nprecision highp int;\n\nattribute vec3 position;\nattribute vec2 uv;\nvarying vec2 vUv;\n\nvoid main() {\n\tvUv = uv;\n\tgl_Position = vec4(position, 1.0);\n}"
+export {rawVert}
